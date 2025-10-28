@@ -335,6 +335,7 @@ body {
     rgba(255, 239, 224, 0.3),
     rgba(255, 255, 255, 0.4)
   );
+  z-index: 2;
 }
 
 /* =========================================================
@@ -377,3 +378,11 @@ body {
   margin-bottom: 0;
   font-family: 'Inter', sans-serif;
 }
+
+.map-header-img {
+  position: absolute;
+  inset: 0;
+  background: url('Map_website.png') center/cover no-repeat;
+  z-index: 1;
+}
+
