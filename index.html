@@ -1,17 +1,110 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ana María Pérez - Geocientífica</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 50px; background: #f7f7f7; }
-    h1 { color: #333; }
-    a { color: #007acc; text-decoration: none; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana María Pérez Hincapié</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hola, soy Ana María Pérez 👋</h1>
-  <p>Geomorfóloga | Investigadora | Comunicadora científica</p>
-  <p>Conecta conmigo en <a href="https://www.linkedin.com/">LinkedIn</a> o <a href="mailto:tuemail@gmail.com">envíame un correo</a>.</p>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching & Outreach</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Ana María Pérez Hincapié</h1>
+      <p class="subtitle">Geomorphologist · Researcher · Science Communicator</p>
+      <p class="intro">
+        I study how landscapes record tectonic and climatic histories: from uplifted marine terraces to reorganized rivers.<br>
+        I’m passionate about understanding how mountains grow and how we can communicate Earth stories beyond academia.<br><br>
+        Estudio cómo los paisajes registran las historias tectónicas y climáticas, desde terrazas marinas y aluviales hasta procesos de reorganización del drenaje.<br>
+        Me apasiona entender cómo crecen las montañas y cómo comunicar las historias de la Tierra más allá de la academia.<br><br>
+        Also, I create things with my hands: jewelry, maps, and ideas. ✨<br>
+        También creo con las manos: aretes, mapas e ideas. ✨
+      </p>
+
+      <div class="social-links">
+        <a href="https://scholar.google.com/citations?user=wa2g7r8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+        <a href="https://www.linkedin.com/in/ana-maria-p%C3%A9rez-hincapi%C3%A9-164779165/?locale=en_US" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/amariph" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="fade-in-section">
+    <h2>Research</h2>
+    <p>
+      My research explores landscape evolution in tectonically active regions, focusing on the interplay between uplift, climate, and erosion.
+      I use field data, topographic analysis, modeling, and geochronology to understand surface processes on different time scales.<br><br>
+      Mi investigación explora la evolución del paisaje en regiones tectónicamente activas, enfocándose en la interacción entre el levantamiento, el clima y la erosión.
+      Utilizo datos de campo, análisis topográfico, modelación y geocronología para entender los procesos superficiales en distintas escalas temporales.
+    </p>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="fade-in-section">
+    <h2>Publications</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching" class="fade-in-section">
+    <h2>Teaching & Outreach</h2>
+    <p>
+      I enjoy sharing geomorphology and geospatial analysis with students and colleagues across languages and regions.<br>
+      Workshops on TopoToolbox (in Spanish and English) and science communication for young scientists.<br><br>
+      Disfruto compartir la geomorfología y el análisis geoespacial con estudiantes y colegas en diferentes idiomas y regiones.<br>
+      Talleres de TopoToolbox (en español e inglés) y comunicación científica para jóvenes investigadoras e investigadores.
+    </p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="fade-in-section about">
+    <h2>About</h2>
+    <img src="WhatsApp Image 2024-05-09 at 11.01.35 PM.jpeg" alt="Ana María Pérez Hincapié" class="profile-pic">
+    <p>
+  Since I was a child, I dreamed of becoming a geologist, and today, I feel deeply grateful and fulfilled to be living that dream.<br>
+  My journey from Medellín, Colombia, has been shaped by opportunities, mentors, and scholarships that opened doors I once thought were out of reach.<br>
+  Science has been not only a dream but also a refuge: a place where I’ve found purpose, wonder, and community.<br>
+  I hope to give back through education, especially by supporting young people from diverse backgrounds and countries like mine,
+  so that the opportunities that shaped my path become the norm, not the exception.<br><br>
+
+  Desde niña soñé siempre con ser geóloga, y hoy me siento profundamente agradecida y feliz de poder vivir ese sueño.<br>
+  Mi camino desde Medellín, Colombia, ha estado lleno de oportunidades, mentores y becas que abrieron puertas que alguna vez creí inalcanzables.<br>
+  La ciencia ha sido para mí no solo un sueño, sino también un refugio, un lugar donde he encontrado propósito, asombro y comunidad.<br>
+  Espero retribuir a través de la educación, especialmente apoyando a jóvenes de diversos orígenes y de países como el mío,
+  para que las oportunidades que transformaron mi vida sean la regla y no la excepción.
+</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ana María Pérez Hincapié — All rights reserved | <a href="https://analoveslandscapes.com">analoveslandscapes.com</a></p>
+  </footer>
+
+  <script>
+    // Fade-in scroll effect
+    const fadeSections = document.querySelectorAll('.fade-in-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.2 });
+    fadeSections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
