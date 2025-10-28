@@ -86,7 +86,7 @@ body {
    ========================================================= */
 
 .hero {
-  background: url('map_header.png') center/cover no-repeat;
+  background: url('Map_website.png') center/cover no-repeat;
   min-height: 78vh; /* header alto pero no pantalla completa */
   display: flex;
   align-items: center;
