@@ -92,11 +92,13 @@ body {
   background: url('Map_website.png') center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 56px; /* espacio para la barra fija */
-  text-align: center;
+  justify-content: flex-start; /* mueve el contenido hacia la izquierda */
+  padding-left: 8%; /* espacio desde el borde izquierdo */
+  margin-top: 56px;
+  text-align: left; /* texto alineado a la izquierda */
   color: var(--text);
 }
+
 
 .hero-overlay {
   position: absolute;
