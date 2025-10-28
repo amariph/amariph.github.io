@@ -115,9 +115,9 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 600px; /* un poco más estrecha para balance visual */
+  max-width: 750px; /* un poco más estrecha para balance visual */
   padding: 42px 54px;
-  background: rgba(255, 255, 255, 0.8); /* 80% opaco */
+  background: rgba(255, 255, 255, 0.6); /* 80% opaco */
   border-radius: 18px;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
