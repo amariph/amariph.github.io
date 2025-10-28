@@ -85,6 +85,10 @@ body {
    Fullscreen Hero Header (Left-Aligned + Elegant Line)
    ========================================================= */
 
+/* =========================================================
+   Fullscreen Hero Header (refined version)
+   ========================================================= */
+
 .hero {
   position: relative;
   width: 100%;
@@ -92,84 +96,85 @@ body {
   background: url('Map_website.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  text-align: left;
-  color: var(--text);
+  align-items: flex-start;
   padding-left: 8%;
   margin-top: 56px;
+  color: var(--text);
+  text-align: left;
 }
 
+/* Oscurece/aclarea sutilmente el fondo para contraste */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.6) 0%,
-    rgba(255, 239, 224, 0.25) 40%,
-    rgba(255, 255, 255, 0.05) 100%
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 239, 224, 0.4) 40%,
+    rgba(255, 255, 255, 0.15) 100%
   );
   z-index: 1;
 }
 
-/* Línea vertical elegante al costado izquierdo */
+/* Línea vertical elegante */
 .hero::before {
   content: "";
   position: absolute;
   left: 6%;
-  top: 15%;
-  bottom: 15%;
+  top: 18%;
+  bottom: 18%;
   width: 2px;
-  background: rgba(0, 122, 115, 0.4); /* verde topográfico translúcido */
+  background: rgba(0, 122, 115, 0.5);
   z-index: 2;
 }
 
+/* Texto principal sólido, sin transparencia */
 .hero-text {
   position: relative;
   z-index: 3;
-  max-width: 600px;
-  margin-bottom: 28px;
+  max-width: 650px;
 }
 
 .hero-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: clamp(34px, 5vw, 56px);
+  font-size: clamp(36px, 5vw, 56px);
   margin: 0 0 8px;
-  color: var(--text);
-  text-shadow: 0 2px 6px rgba(255,255,255,0.6);
+  color: #1f1f1f; /* texto sólido */
+  text-shadow: 0 2px 4px rgba(255,255,255,0.7);
 }
 
 .hero-subtitle {
   font-size: clamp(16px, 2vw, 20px);
-  color: #333;
-  margin: 0 0 6px;
+  color: #2f2f2f;
   font-weight: 700;
+  margin: 0 0 6px;
 }
 
 .hero-tagline {
   font-size: clamp(15px, 1.8vw, 18px);
-  color: #555;
-  margin: 0 0 24px;
+  color: #444;
+  margin: 0 0 28px;
 }
 
-/* Caja clara con los enlaces */
+/* Caja clara con los enlaces + botón */
 .hero-content {
   position: relative;
   z-index: 3;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
-  padding: 18px 28px;
-  backdrop-filter: blur(6px);
+  padding: 20px 30px;
+  backdrop-filter: blur(8px);
   display: inline-block;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
 .hero-cta {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
+  gap: 10px;
 }
 
 .hero-cta .links a {
@@ -184,10 +189,27 @@ body {
   color: #015c57;
 }
 
+/* === Botón verde "Learn more" de vuelta === */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.25s ease;
+  margin-top: 6px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  background: #016c66;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .cta-sub {
   color: var(--muted);
   font-size: 14px;
-  margin-top: 6px;
 }
 
 /* Fade animation for hero text */
@@ -200,6 +222,17 @@ body {
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hero {
+    padding-left: 5%;
+  }
+  .hero-content {
+    padding: 16px 22px;
+  }
+}
+
 
 /* =========================================================
    Sections
